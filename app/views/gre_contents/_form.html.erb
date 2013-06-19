@@ -1,0 +1,33 @@
+<%= form_for(@gre_content) do |f| %>
+  <% if @gre_content.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@gre_content.errors.count, "error") %> prohibited this gre_content from being saved:</h2>
+
+      <ul>
+      <% @gre_content.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :word %><br />
+    <%= f.text_field :word %>
+  </div>
+  <div class="field">
+    <%= f.label :meaning %><br />
+    <%= f.text_field :meaning %>
+  </div>
+  <div class="field">
+    <%= f.label :usage1 %><br />
+    <%= f.text_area :usage1 %>
+  </div>
+  <div class="field">
+    <%= f.label :usage2 %><br />
+    <%= f.text_area :usage2 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

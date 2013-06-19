@@ -1,0 +1,29 @@
+<h1>Listing gre_contents</h1>
+
+<table>
+  <tr>
+    <th>Word</th>
+    <th>Meaning</th>
+    <th>Usage1</th>
+    <th>Usage2</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @gre_contents.each do |gre_content| %>
+  <tr>
+    <td><%= gre_content.word %></td>
+    <td><%= gre_content.meaning %></td>
+    <td><%= gre_content.usage1 %></td>
+    <td><%= gre_content.usage2 %></td>
+    <td><%= link_to 'Show', gre_content %></td>
+    <td><%= link_to 'Edit', edit_gre_content_path(gre_content) %></td>
+    <td><%= link_to 'Destroy', gre_content, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Gre content', new_gre_content_path %>

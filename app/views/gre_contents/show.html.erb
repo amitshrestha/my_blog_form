@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Word:</b>
+  <%= @gre_content.word %>
+</p>
+
+<p>
+  <b>Meaning:</b>
+  <%= @gre_content.meaning %>
+</p>
+
+<p>
+  <b>Usage1:</b>
+  <%= @gre_content.usage1 %>
+</p>
+
+<p>
+  <b>Usage2:</b>
+  <%= @gre_content.usage2 %>
+</p>
+
+
+<%= link_to 'Edit', edit_gre_content_path(@gre_content) %> |
+<%= link_to 'Back', gre_contents_path %>
