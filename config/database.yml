@@ -1,24 +1,24 @@
 
 development:
   adapter: postgresql
-  encoding: utf8
-  database: blog_development
+  encoding: unicode
+  database: myblog_devel
   pool: 5
-  username: amitshrestha
+  username: root
   password:
 
 test:
   adapter: postgresql
-  encoding: utf8
+  encoding: unicode
   database: blog_test
   pool: 5
-  username: amitshrestha
+  username:
   password:
 
 production:
   adapter: postgresql
-  encoding: utf8
+  encoding: unicode
   database: blog_production
   pool: 5
-  username: amitshrestha
+  username:
   password:
