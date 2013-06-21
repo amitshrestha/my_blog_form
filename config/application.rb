@@ -63,7 +63,7 @@ module MyBlog
     config.middleware.use Rack::Cors do
       allow do
         origins '*'
-        resource %r{/api/gre_contents/},
+        resource "*",
           :headers => ['Origin', 'Accept', 'Content-Type'],
           :methods => [:get]
       end
