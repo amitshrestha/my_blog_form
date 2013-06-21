@@ -58,5 +58,15 @@ module MyBlog
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+    config.middleware.use Rack::JSONP
+
+    config.middleware.use Rack::Cors do
+      allow do
+        origins '*'
+        resource %r{/api/gre_contents/},
+          :headers => ['Origin', 'Accept', 'Content-Type'],
+          :methods => [:get]
+      end
+    end
   end
 end

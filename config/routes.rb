@@ -1,6 +1,10 @@
 MyBlog::Application.routes.draw do
   resources :gre_contents
 
+    namespace :api do
+      resources :gre_contents
+    end
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
