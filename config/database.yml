@@ -5,7 +5,7 @@ development:
   database: myblog_devel
   pool: 5
   username: root
-  password:
+  password: root
 
 test:
   adapter: postgresql
@@ -20,5 +20,5 @@ production:
   encoding: unicode
   database: blog_production
   pool: 5
-  username:
-  password:
+  username: root
+  password: root

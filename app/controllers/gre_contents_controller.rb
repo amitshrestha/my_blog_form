@@ -1,4 +1,5 @@
 class GreContentsController < ApplicationController
+  skip_before_filter :authenticate, only: [:new, :create, :all]
 
   def all
     # render json:
